@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/maxima-fp-ecom-react-redux/static/css/main.1d766016.css",
+    "main.js": "/maxima-fp-ecom-react-redux/static/js/main.56fa51d5.js",
+    "index.html": "/maxima-fp-ecom-react-redux/index.html",
+    "main.1d766016.css.map": "/maxima-fp-ecom-react-redux/static/css/main.1d766016.css.map",
+    "main.56fa51d5.js.map": "/maxima-fp-ecom-react-redux/static/js/main.56fa51d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d766016.css",
+    "static/js/main.56fa51d5.js"
+  ]
+}
