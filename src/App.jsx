@@ -1,16 +1,20 @@
 import './App.scss';
-import React from 'react';
-import { useSelector } from 'react-redux';
-// import { bindActionCreators } from 'redux';
-// import { actionCreators } from './state/index';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './state/actionCreators';
 
 function App() {
   const products = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
-  // const { 
-  //   depositMoney,
-  //   withdrawMoney
-  // } = bindActionCreators(actionCreators, dispatch);
+  const { 
+    fetchProducts,
+  } = bindActionCreators(actionCreators, dispatch);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts])
  
   return (
     <div className="App">

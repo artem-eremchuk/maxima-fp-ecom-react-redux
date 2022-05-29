@@ -1,20 +1,9 @@
-const initialState = [
-  {
-    id: 1,
-    title: 'milk'
-  },
-  {
-    id: 2,
-    title: 'bread'
-  },
-  {
-    id: 3,
-    title: 'juice'
-  },
-]
+const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 
-const productsReducer = (state = initialState, action) => {
+const productsReducer = (state = [], action) => {
   switch(action.type) {  
+    case FETCH_PRODUCTS:
+      return [...action.payload];
     default:
       return state;
   }

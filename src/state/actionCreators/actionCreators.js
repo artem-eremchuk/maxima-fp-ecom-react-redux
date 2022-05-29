@@ -1,17 +1,13 @@
-export const depositMoney = (amount) => {
-  return (dispatch) => {
-    dispatch({
-      type: 'deposit',
-      payload: amount
-    })
-  }
-}
+import axios from "axios";
 
-export const withdrawMoney = (amount) => {
-  return (dispatch) => {
+export const fetchProducts = () => {
+  return async (dispatch, getState) => {
+    const products = await axios.get('https://fakestoreapi.com/products');
+    // console.log(products.data);
+
     dispatch({
-      type: 'withdraw',
-      payload: amount
+      type: 'FETCH_PRODUCTS',
+      payload: products.data,
     })
-  }
+  } 
 }
