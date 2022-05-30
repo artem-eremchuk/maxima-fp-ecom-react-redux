@@ -1,9 +1,9 @@
-import './App.scss';
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.scss';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import { actionCreators } from './state/actionCreators';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
@@ -26,7 +26,7 @@ function App() {
  
   return (
     <>
-      <Router>
+      <Router basename='/maxima-fp-ecom-react-redux'>
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<HomePage />} />

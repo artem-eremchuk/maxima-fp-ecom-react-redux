@@ -1,8 +1,24 @@
+import './Header.scss';
 import React from 'react';
+
+import Logo from '../../components/Logo/Logo';
+import Navbar from '../../components/Navbar/Navbar';
+import Search from '../../components/Search/Search';
 
 function Header() {
   return (
-    <div>Header</div>
+    <header className='header'>
+      <div className="container">
+        <div className="header-wrapper">
+          <div className="header__logo">
+            <Logo />
+            <h2 className="header__logo-text">Интернет-магазин</h2>
+          </div>
+          <Search />
+          <Navbar />
+        </div>
+      </div>
+    </header>
   )
 }
 
