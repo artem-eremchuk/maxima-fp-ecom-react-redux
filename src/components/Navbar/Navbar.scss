@@ -7,16 +7,25 @@
     padding: calc(3vw / 14.4) calc(8vw / 14.4);
     background: transparent;
     border-radius: calc(10vw / 14.4);
+
+    &:active {
+      color: #000000;
+    }
     
     &-cart {
       position: relative;
 
       &-count {
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(20vw / 14.4);
+        width: calc(20vw / 14.4);
+        padding: calc(10vw / 14.4);
         top: calc(-20vw / 14.4);
         right: calc(-20vw / 14.4);
         font-size: calc(25vw / 14.4);
-        padding: calc(5vw / 14.4) calc(5vw / 14.4);
         border-radius: 50%;
         background: red;
         color: #ffffff;
@@ -45,7 +54,9 @@
           top: -20px;
           right: -20px;
           font-size: 25px;
-          padding: 5px 5px;
+          height: 20px;
+          width: 20px;
+          padding: 10px;
         }
       }
 
@@ -57,24 +68,26 @@
 
   @media screen and (min-width: 320px) and (max-width: 767px){
     & {
-      height: calc(60vw / 7.67);
+      height: calc(60vw / 3.2);
     }
 
     &__link {
-      font-size: calc(36vw / 7.67);
-      padding: calc(3vw / 7.67) calc(8vw / 7.67);
+      font-size: calc(22vw / 3.2);
+      padding: calc(3vw / 3.2) calc(8vw / 3.2);
 
       &-cart { 
         &-count {
-          top: calc(-20vw / 7.67);
-          right: calc(-20vw / 7.67);
-          font-size: calc(25vw / 7.67);
-          padding: calc(5vw / 14.4) calc(5vw / 7.67);
+          top: calc(-15vw / 3.2);
+          right: calc(-15vw / 3.2);
+          font-size: calc(16vw / 3.2);
+          height: calc(20vw / 3.2);
+          width: calc(20vw / 3.2);
+          padding: calc(4vw / 3.2);
         }
       }
 
       &-btn {
-        margin-right: calc(20vw / 7.67);
+        margin-right: calc(5vw / 3.2);
       }
     }
   }
@@ -96,7 +109,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px){
   .active {
-    padding: calc(3vw / 7.67) calc(8vw / 7.67);
+    padding: calc(3vw / 3.2) calc(8vw / 3.2);
     border-radius: calc(10vw / 7.67);
   }
 }

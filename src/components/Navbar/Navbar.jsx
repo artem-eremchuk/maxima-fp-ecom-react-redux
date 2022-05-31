@@ -28,7 +28,7 @@ function Navbar() {
             ? 'navbar__link-cart-count' 
             : 'hidden'
         }
-        >12</span>
+        >22</span>
       </NavLink>
     </nav>
   )

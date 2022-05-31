@@ -1,18 +1,40 @@
 .logo {
-  height: calc(70vw / 14.4);
-  width: calc(70vw / 14.4);
+  &-header {
+    height: calc(70vw / 14.4);
+    width: calc(70vw / 14.4);
 
-  @media screen and (min-width: 1441px){ 
-    & {
-      height: 70px;
-      width: 70px;
+    @media screen and (min-width: 1441px){ 
+      & {
+        height: 70px;
+        width: 70px;
+      }
+    }
+  
+    @media screen and (min-width: 320px) and (max-width: 767px){
+      & {
+        height: calc(70vw / 5);
+        width: calc(70vw / 5);
+      }
     }
   }
 
-  @media screen and (min-width: 320px) and (max-width: 767px){
-    & {
-      height: calc(70vw / 7.67);
-      width: calc(70vw / 7.67);
+  &-footer {
+    height: calc(181vw / 14.4);
+    width: calc(181vw / 14.4);
+
+    @media screen and (min-width: 1441px){ 
+      & {
+        height: 181px;
+        width: 181px;
+      }
+    }
+  
+    @media screen and (min-width: 320px) and (max-width: 767px){
+      & {
+        height: calc(181vw / 5);
+        width: calc(181vw / 5);
+      }
     }
   }
+
 }

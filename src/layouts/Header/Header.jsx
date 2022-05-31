@@ -11,7 +11,7 @@ function Header() {
       <div className="container">
         <div className="header-wrapper">
           <div className="header__logo">
-            <Logo />
+            <Logo blockName="header"/>
             <h2 className="header__logo-text">Интернет-магазин</h2>
           </div>
           <Search />

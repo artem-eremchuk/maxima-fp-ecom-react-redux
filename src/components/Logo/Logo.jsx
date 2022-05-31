@@ -3,12 +3,12 @@ import React from 'react';
 import logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
 
-function Logo() {
+function Logo({ blockName }) {
   return (
     <div>
       <Link to={'/'}>
         <img
-          className='logo' 
+          className={`logo-${blockName}`} 
           src={logo} 
           alt="logo"
         />
