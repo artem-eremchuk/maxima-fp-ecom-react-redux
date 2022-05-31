@@ -1,29 +1,35 @@
 import './Navbar.scss';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
 
 function Navbar() {
   return (
     <nav className='navbar'>
-      <Link 
+      <NavLink 
         to={'/'} 
         className="navbar__link navbar__link-btn"
       >
         Главная
-      </Link>
-      <Link 
+      </NavLink>
+      <NavLink 
         to={'/contacts'} 
         className="navbar__link navbar__link-btn"
       >
         Контакты
-      </Link>
-      <Link 
+      </NavLink>
+      <NavLink 
         to={'/cart'} 
         className="navbar__link navbar__link-cart"
       >
-        <FiShoppingCart />
-      </Link>
+        <FiShoppingCart className='navbar__link-cart-icon'/>
+        <span className={
+          true 
+            ? 'navbar__link-cart-count' 
+            : 'hidden'
+        }
+        >12</span>
+      </NavLink>
     </nav>
   )
 }

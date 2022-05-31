@@ -4,34 +4,103 @@
 
   &__link {
     font-size: calc(36vw / 14.4);
+    padding: calc(3vw / 14.4) calc(8vw / 14.4);
+    background: transparent;
+    border-radius: calc(10vw / 14.4);
+    
+    &-cart {
+      position: relative;
 
-    // &-cart {
+      &-count {
+        position: absolute;
+        top: calc(-20vw / 14.4);
+        right: calc(-20vw / 14.4);
+        font-size: calc(25vw / 14.4);
+        padding: calc(5vw / 14.4) calc(5vw / 14.4);
+        border-radius: 50%;
+        background: red;
+        color: #ffffff;
+      }
+    }
 
-    // } 
+    &-cart-icon {
+      display: flex;
+      align-items: center;
+    } 
 
     &-btn {
-      margin-right: calc(30vw / 14.4);
+      margin-right: calc(20vw / 14.4);
       text-decoration: none;
     }
+
   }
 
   @media screen and (min-width: 1441px){ 
     &__link {
       font-size: 36px;
+      padding: 3px 8px;
+
+      &-cart { 
+        &-count {
+          top: -20px;
+          right: -20px;
+          font-size: 25px;
+          padding: 5px 5px;
+        }
+      }
 
       &-btn {
-        margin-right: 30px;
+        margin-right: 20px;
       }
     }
   }
 
   @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      height: calc(60vw / 7.67);
+    }
+
     &__link {
       font-size: calc(36vw / 7.67);
+      padding: calc(3vw / 7.67) calc(8vw / 7.67);
+
+      &-cart { 
+        &-count {
+          top: calc(-20vw / 7.67);
+          right: calc(-20vw / 7.67);
+          font-size: calc(25vw / 7.67);
+          padding: calc(5vw / 14.4) calc(5vw / 7.67);
+        }
+      }
 
       &-btn {
-        margin-right: calc(30vw / 7.67);
+        margin-right: calc(20vw / 7.67);
       }
     }
   }
+}
+
+.active {
+  padding: calc(3vw / 14.4) calc(8vw / 14.4);
+  background: #ffffff;
+  border-radius: calc(10vw / 14.4);
+  color: #000000;
+}
+
+@media screen and (min-width: 1441px){ 
+  .active {
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .active {
+    padding: calc(3vw / 7.67) calc(8vw / 7.67);
+    border-radius: calc(10vw / 7.67);
+  }
+}
+
+.hidden {
+  display: none;
 }
