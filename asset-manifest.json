@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/maxima-fp-ecom-react-redux/static/css/main.b6eb7f0f.css",
-    "main.js": "/maxima-fp-ecom-react-redux/static/js/main.6f800a1a.js",
+    "main.css": "/maxima-fp-ecom-react-redux/static/css/main.32cb1c9f.css",
+    "main.js": "/maxima-fp-ecom-react-redux/static/js/main.5357d355.js",
     "static/media/Roboto-Regular.woff": "/maxima-fp-ecom-react-redux/static/media/Roboto-Regular.31012f9b3e3da44f87e8.woff",
     "static/media/Roboto-Regular.woff2": "/maxima-fp-ecom-react-redux/static/media/Roboto-Regular.a25806274237d06e00a6.woff2",
     "static/media/logo.svg": "/maxima-fp-ecom-react-redux/static/media/logo.960ce00deab07376b8bc27234ff9ca27.svg",
     "index.html": "/maxima-fp-ecom-react-redux/index.html",
-    "main.b6eb7f0f.css.map": "/maxima-fp-ecom-react-redux/static/css/main.b6eb7f0f.css.map",
-    "main.6f800a1a.js.map": "/maxima-fp-ecom-react-redux/static/js/main.6f800a1a.js.map"
+    "main.32cb1c9f.css.map": "/maxima-fp-ecom-react-redux/static/css/main.32cb1c9f.css.map",
+    "main.5357d355.js.map": "/maxima-fp-ecom-react-redux/static/js/main.5357d355.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6eb7f0f.css",
-    "static/js/main.6f800a1a.js"
+    "static/css/main.32cb1c9f.css",
+    "static/js/main.5357d355.js"
   ]
 }
