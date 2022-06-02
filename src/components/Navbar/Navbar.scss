@@ -20,12 +20,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: calc(20vw / 14.4);
-        width: calc(20vw / 14.4);
-        padding: calc(10vw / 14.4);
-        top: calc(-20vw / 14.4);
-        right: calc(-20vw / 14.4);
-        font-size: calc(25vw / 14.4);
+        padding: calc(14vw / 14.4);
+        font-size: calc(16vw / 14.4);
+        top: calc(-10vw / 14.4);
+        right: calc(-10vw / 14.4);
+        width: calc(12vw / 14.4);
+        height: calc(12vw / 14.4);
         border-radius: 50%;
         background: red;
         color: #ffffff;
@@ -51,12 +51,12 @@
 
       &-cart { 
         &-count {
-          top: -20px;
-          right: -20px;
-          font-size: 25px;
-          height: 20px;
-          width: 20px;
-          padding: 10px;
+          font-size: 16px;
+          top: -10px;
+          right: -10px;
+          height: 12px;
+          width: 12px;
+          padding: 14px;
         }
       }
 
@@ -77,12 +77,12 @@
 
       &-cart { 
         &-count {
-          top: calc(-15vw / 3.2);
-          right: calc(-15vw / 3.2);
-          font-size: calc(16vw / 3.2);
-          height: calc(20vw / 3.2);
-          width: calc(20vw / 3.2);
-          padding: calc(4vw / 3.2);
+          font-size: calc(12vw / 3.2);
+          top: calc(-5vw / 3.2);
+          right: calc(-5vw / 3.2);
+          height: calc(15vw / 3.2);
+          width: calc(15vw / 3.2);
+          padding: calc(10vw / 3.2);
         }
       }
 
