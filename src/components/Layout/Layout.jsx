@@ -5,18 +5,12 @@ import Header from '../../layouts/Header/Header';
 import Footer from '../../layouts/Footer/Footer';
 
 function Layout() {
-  const mainStyle = {
-    margin: "0 30px",
-    display: "flex",
-    flexWrap: "wrap"
-  }
-
   return (
     <>
       <Header />
         <main className='main'>
           <div className="container">
-            <div className="main-wrapper" style={mainStyle} >
+            <div className="main-wrapper">
               <Outlet />
             </div>
           </div>

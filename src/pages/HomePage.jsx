@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../state/actionCreators';
