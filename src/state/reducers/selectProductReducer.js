@@ -1,6 +1,8 @@
 const SELECT_PRODUCT= 'SELECT_PRODUCT';
 
-const selectProductReducer = (state = {}, action) => {
+const initialState = JSON.parse(window.localStorage.getItem('product')) || {};
+
+const selectProductReducer = (state = initialState, action) => {
   switch(action.type) {  
     case SELECT_PRODUCT:
       return {...action.payload};
