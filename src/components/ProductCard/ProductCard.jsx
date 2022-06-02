@@ -1,9 +1,17 @@
 import './ProductCard.scss';
-import { Link } from 'react-router-dom';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../../state/actionCreators';
 
 function ProductCard({ product }) {
   const { id, image, title } = product;
+  const dispatch = useDispatch();
+
+  const { 
+    selectProduct,
+  } = bindActionCreators(actionCreators, dispatch);
 
 
   const handlerBtn = (e) => {
@@ -13,7 +21,11 @@ function ProductCard({ product }) {
 
   return (
     <div className="product-card-container">
-      <Link className="product-card" to={`product/${id}`}>
+      <Link 
+        className="product-card" 
+        to={`product/${id}`}
+        onClick={() => selectProduct(product)}
+      >
         <div className="product-card__img-wrapper">
           <img className='product-card__img' src={image} alt="product-card" />
         </div>
