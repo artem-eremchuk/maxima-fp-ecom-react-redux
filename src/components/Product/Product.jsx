@@ -20,7 +20,7 @@ function Product({ product }) {
       <div className="product-info">
         <h2 className="product-info__title">{title}</h2>
         <p className="product-info__description">{description}</p>
-        <h3 className="product-info__price">{`$ ${price}`}</h3>
+        <h3 className="product-info__price">{`$${price}`}</h3>
         <button className="product-info__btn">В корзину</button>
       </div>
     </div>

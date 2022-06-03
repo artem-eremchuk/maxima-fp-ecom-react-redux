@@ -3,8 +3,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 20px 0 45px 0;
+    padding: calc(20vw / 14.4) 0 calc(45vw / 14.4) 0;
     height: calc(40 * 1vw);
+    margin: calc(30vw / 14.4) 0;
   }
 
   &-img {
@@ -18,26 +19,28 @@
     }
 
     &__container {
-      width: 80%;
+      width: 70%;
       text-align: center;
     }
   }
 
   &-info {
     flex: 0 0 60%;
-    padding: 0 30px;
+    padding: 0 calc(30vw / 14.4);
 
     &__title {
-      margin: 20px 0;
+      font-size: calc(30vw / 14.4);
+      margin: calc(20vw / 14.4) 0;
     }
 
     &__description {
-      margin: 0 0 20px 0;
+      font-size: calc(20vw / 14.4);
+      margin: 0 0 calc(20vw / 14.4) 0;
     }
 
     &__price {
-      font-size: 30px;
-      margin: 0 0 20px 0;
+      font-size: calc(30vw / 14.4);
+      margin: 0 0 calc(20vw / 14.4) 0;
     }
 
     &__btn {
@@ -48,6 +51,87 @@
       background-color: #652D90;
       color: #ffffff;
       cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 1441px){ 
+    &-wrapper {
+      padding: 20px 0 45px 0;
+      height: 100%;
+      margin: 30px;
+    }
+
+    &-info {
+      padding: 0 30px;
+  
+      &__title {
+        font-size: 30px;
+        margin: 20px 0;
+      }
+  
+      &__description {
+        font-size: 25px;
+        margin: 0 0 20px 0;
+      }
+  
+      &__price {
+        font-size: 35px;
+        margin: 0 0 30px 0;
+      }
+  
+      &__btn {
+        font-size: 24px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #652D90;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    &-wrapper {
+      display: block;
+      height: 100%;
+      margin: calc(30vw / 3.2) 0;
+    }
+
+    &-img {
+      width: 80%;
+  
+      &__wrapper {
+        flex: 0 0 100%;
+      }
+    }
+
+    &-info {
+      flex: 0 0 100%;
+      text-align: center;
+
+      &__title {
+        font-size: calc(25vw / 3.2);
+        margin: calc(20vw / 3.2) 0;
+        text-align: center;
+      }
+  
+      &__description {
+        font-size: calc(15vw / 3.2);
+        margin: 0 0 calc(20vw / 3.2) 0;
+        text-align: justify;
+      }
+  
+      &__price {
+        font-size: calc(30vw / 3.2);
+        margin: 0 0 calc(20vw / 3.2) 0;
+      }
+
+      &__btn {
+        font-size: calc(16vw / 3.2);
+        padding: calc(10vw/ 3.2) calc(15vw / 3.2);
+        border-radius: calc(5vw / 3.2);
+      }
     }
   }
 }

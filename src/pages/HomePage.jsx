@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../state/actionCreators';
 import ProductCard from '../components/ProductCard/ProductCard';
+import Spinner from '../components/Spinner/Spinner';
 
 function HomePage() {
-  const products = useSelector((state) => state.products);
+  const { products, loading } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   const { 
@@ -18,7 +19,7 @@ function HomePage() {
 
   return (
     <>
-      {products.map(product => 
+      {loading ? <Spinner /> : products.map(product => 
         <ProductCard 
           key={product.id} 
           product={product} 
