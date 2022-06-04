@@ -1,5 +1,6 @@
 import './Product.scss';
 import React, { useEffect } from 'react';
+import Button from '../Button/Button';
 
 // Individual Page
 function Product({ product }) {
@@ -21,7 +22,7 @@ function Product({ product }) {
         <h2 className="product-info__title">{title}</h2>
         <p className="product-info__description">{description}</p>
         <h3 className="product-info__price">{`$${price}`}</h3>
-        <button className="product-info__btn">В корзину</button>
+        <Button product={product} />
       </div>
     </div>
   )

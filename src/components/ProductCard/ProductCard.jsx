@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state/actionCreators';
+import Button from '../Button/Button';
 
 function ProductCard({ product }) {
   const { id, image, title } = product;
@@ -16,11 +17,6 @@ function ProductCard({ product }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-
-  const handlerBtn = (e) => {
-    e.preventDefault();
-    console.log('click');
-  }
 
   return (
     <div className="product-card-container">
@@ -36,12 +32,7 @@ function ProductCard({ product }) {
           <h2 className="product-card__info-title">{title}</h2>
         </div>
         <div className="product-card__btn-wrapper">
-          <button 
-            className="product-card__btn"
-            onClick={handlerBtn}
-          >
-            В корзину
-          </button>
+          <Button product={product} />
         </div>
       </Link>
     </div>

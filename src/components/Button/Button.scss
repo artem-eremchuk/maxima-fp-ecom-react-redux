@@ -1,0 +1,17 @@
+.btn {
+  font-size: calc(16vw / 14.4);
+  padding: calc(10vw/ 14.4) calc(15vw/ 14.4);
+  border-radius: calc(5vw / 14.4);
+  width: calc(120vw / 14.4);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+
+  &-not-in-cart {
+    background-color: #652D90;
+  }
+
+  &-in-cart {
+    background-color: tomato;
+  }
+}

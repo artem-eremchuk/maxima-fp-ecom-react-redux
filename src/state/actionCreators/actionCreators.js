@@ -1,5 +1,19 @@
 import axios from "axios";
 
+export const changeIsInCartParam = (product) => {
+  return {
+    type: 'CHANGE_IS_IN_CART_PARAM',
+    payload: product,
+  }
+}
+
+export const addToCart = (product) => {
+  return {
+    type: 'ADD_TO_CART', 
+    payload: product,
+  }
+}
+
 export const searchProduct = (text) => {
   return {
     type: 'SEARCH_PRODUCT',
