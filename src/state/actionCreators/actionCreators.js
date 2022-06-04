@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const searchProduct = (text) => {
+  return {
+    type: 'SEARCH_PRODUCT',
+    payload: text,
+  }
+}
+
 export const selectProduct = (product) => {
   return {
     type: 'SELECT_PRODUCT',

@@ -1,7 +1,7 @@
 import './Product.scss';
 import React, { useEffect } from 'react';
 
-
+// Individual Page
 function Product({ product }) {
   const { title, description, image, price } = product;
 

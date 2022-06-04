@@ -1,5 +1,5 @@
 import './ProductCard.scss';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -13,6 +13,9 @@ function ProductCard({ product }) {
     selectProduct,
   } = bindActionCreators(actionCreators, dispatch);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const handlerBtn = (e) => {
     e.preventDefault();
