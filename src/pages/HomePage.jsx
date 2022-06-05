@@ -6,18 +6,30 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import Spinner from '../components/Spinner/Spinner';
 
 function HomePage() {
-  const { products, loading } = useSelector((state) => state.products);
+  const { 
+    products, 
+    loading,
+    isProductsLoaded,
+  } = useSelector((state) => state.products);
+  const cart = useSelector((state) => state.cart);
   const searchText = useSelector((state) => state.searchProduct);
   const dispatch = useDispatch();
-
+  
   const { 
     fetchProducts,
+    compareCartAndProducts,
   } = bindActionCreators(actionCreators, dispatch);
 
   
   useEffect(() => {
     fetchProducts();
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (isProductsLoaded) {
+      compareCartAndProducts(cart);
+    }
+  }, [isProductsLoaded]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

@@ -2,11 +2,12 @@ import './Navbar.scss';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state/actionCreators';
 
 function Navbar() {
+  const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
   const { 
@@ -34,11 +35,11 @@ function Navbar() {
       >
         <FiShoppingCart className='navbar__link-cart-icon'/>
         <span className={
-          true 
+          (cart.length) 
             ? 'navbar__link-cart-count' 
             : 'hidden'
         }
-        >22</span>
+        >{cart.length}</span>
       </NavLink>
     </nav>
   )

@@ -1,13 +1,21 @@
 import './Product.scss';
 import React, { useEffect } from 'react';
 import Button from '../Button/Button';
+// import { useNavigate } from 'react-router-dom';
 
 // Individual Page
 function Product({ product }) {
   const { title, description, image, price } = product;
 
+  // const navigate = useNavigate()
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // window.onpopstate = () => {
+    //   navigate("/");
+    // }
+
     localStorage.setItem('product', JSON.stringify(product))
   }, [product])
 

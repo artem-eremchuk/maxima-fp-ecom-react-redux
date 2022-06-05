@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const compareCartAndProducts = (cart) => {
+  return {
+    type: 'COMPARE_CART_AND_PRODUCTS',
+    payload: cart
+  }
+}
+
 export const changeIsInCartParam = (product) => {
   return {
     type: 'CHANGE_IS_IN_CART_PARAM',
@@ -10,6 +17,13 @@ export const changeIsInCartParam = (product) => {
 export const addToCart = (product) => {
   return {
     type: 'ADD_TO_CART', 
+    payload: product,
+  }
+}
+
+export const removeFromCart = (product) => {
+  return {
+    type: 'REMOVE_FROM_CART', 
     payload: product,
   }
 }
