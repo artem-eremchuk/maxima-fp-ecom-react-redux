@@ -39,7 +39,11 @@ function Navbar() {
             ? 'navbar__link-cart-count' 
             : 'hidden'
         }
-        >{cart.length}</span>
+        >
+          {
+            cart.reduce((total, purchase) => total + purchase.count, 0)
+          }
+        </span>
       </NavLink>
     </nav>
   )

@@ -1,9 +1,24 @@
 import axios from "axios";
 
+export const dicreasePayment = (product) => {
+  return {
+    type: 'DICREASE_PAYMENT',
+    payload: product,
+  }
+}
+
+
+export const increasePayment = (product) => {
+  return {
+    type: 'INCREASE_PAYMENT',
+    payload: product,
+  }
+}
+
 export const compareCartAndProducts = (cart) => {
   return {
     type: 'COMPARE_CART_AND_PRODUCTS',
-    payload: cart
+    payload: cart,
   }
 }
 
