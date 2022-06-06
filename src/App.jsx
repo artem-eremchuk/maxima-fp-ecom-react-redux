@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import ContactsPage from './pages/ContactsPage';
-import CartPage from './pages/CartPage';
+import CartPage from './pages/CartPage/CartPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Layout from './components/Layout/Layout';
 
