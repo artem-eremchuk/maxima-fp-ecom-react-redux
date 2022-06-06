@@ -44,8 +44,10 @@ const productsReducer = (state = initialState, action) => {
         ...state,
         products: state.products.map(product => {
           if (product.id === action.payload.id){
-            product.isInCart = !product.isInCart;
-            return product;
+            return {
+              ...product,
+              isInCart: !product.isInCart,
+            }
           }
           return product;
         })

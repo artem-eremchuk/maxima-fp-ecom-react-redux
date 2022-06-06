@@ -5,7 +5,10 @@ import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state/actionCreators';
 
 function Button({ product }) {
-  const { isInCart } = product;
+  const { id } = product;
+
+  const products = useSelector(state => state.products.products);
+  const isInCart = products.find(product => product.id === id).isInCart
 
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart);
@@ -34,17 +37,16 @@ function Button({ product }) {
       changeIsInCartParam(product);
       localStorage.removeItem('cart');
     }
-
   }
 
   return (
     <button 
       className={
-        !isInCart ? 'btn btn-not-in-cart' : 'btn btn-in-cart'
+        (!isInCart) ? 'btn btn-not-in-cart' : 'btn btn-in-cart'
       }
       onClick={(e) => handlerToggle(e)}
     >
-      {!isInCart ? 'В корзину' : 'Убрать'}
+      {(!isInCart) ? 'В корзину' : 'Убрать'}
     </button>
   )
 }

@@ -14,13 +14,12 @@ function HomePage() {
   const cart = useSelector((state) => state.cart);
   const searchText = useSelector((state) => state.searchProduct);
   const dispatch = useDispatch();
-  
+
   const { 
     fetchProducts,
     compareCartAndProducts,
   } = bindActionCreators(actionCreators, dispatch);
 
-  
   useEffect(() => {
     fetchProducts();
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
