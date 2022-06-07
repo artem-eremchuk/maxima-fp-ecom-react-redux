@@ -5,7 +5,7 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: calc(30vw / 14.4);
   }
 
   &-list {
@@ -16,37 +16,113 @@
 
   &-empty {
     &-title {
-      font-size: 36px;
+      font-size: calc(36vw / 14.4);
     }
 
     &-text {
-      font-size: 24px;
+      font-size: calc(24vw / 14.4);
     }
   }
 
   &-total {
-    padding: 0 15px;
+    padding: 0 calc(15vw / 14.4);
     width: 38%;
     color: #652D90;
 
     &__title {
-      font-size: 36px;
-      margin: 0 0 30px 0;
+      font-size: calc(28vw / 14.4);
+      margin: 0 0 calc(30vw / 14.4) 0;
       text-transform: uppercase;
-      border-bottom: 3px solid #652D90;
+      border-bottom: calc(3vw / 14.4) solid #652D90;
     }
 
     &__products {
       &-count {
-        font-size: 22px;
-        margin-bottom: 20px;
+        font-size: calc(22vw / 14.4);
+        margin-bottom: calc(20vw / 14.4);
       }
     }
 
     &__sum {
-      font-size: 24px;
+      font-size: calc(22vw / 14.4);
       text-transform: uppercase;
       font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: 1441px){
+    & {
+      &-total{
+        padding: 0 15px;
+
+        &__title {
+          font-size: 36px;
+          margin: 0 0 25px 0;
+        }
+
+        &__products-count {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+
+        &__sum {
+          font-size: 28px;
+        }
+      }
+
+      &-empty {
+        &-title {
+          font-size: 36px;
+        }
+    
+        &-text {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      &-wrapper {
+        flex-direction: column;
+      }
+
+      &-list {
+        width: 100%;
+        margin-bottom: calc(30vw / 3.2);
+      }
+
+      &-total {
+        width: 100%;
+
+        &__title {
+          font-size: calc(28vw / 3.2);
+          border-bottom: calc(3vw / 3.2) solid #652D90;
+          margin: 0 0 calc(15vw / 3.2) 0;
+        }
+
+        &__products-count {
+          font-size: calc(22vw / 3.2);
+          margin-bottom: calc(20vw / 3.2);
+        }
+
+        &__sum {
+          font-size: calc(20vw / 3.2);
+        }
+      }
+
+      &-empty {
+        &-title {
+          font-size: calc(32vw / 3.2);
+          margin-top: 0;
+        }
+    
+        &-text {
+          font-size: calc(18vw / 3.2);
+          margin-top: 0;
+        }
+      }
     }
   }
 }

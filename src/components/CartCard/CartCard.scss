@@ -1,10 +1,10 @@
 .item {
   display: flex;
   align-items: center;
-  border: 3px solid #652D90;
-  border-radius: 10px;
-  padding: 10px 0;
-  margin-bottom: 10px;
+  border: calc(3vw / 14.4) solid #652D90;
+  border-radius: calc(10vw / 14.4);
+  padding: calc(10vw / 14.4) 0;
+  margin-bottom: calc(10vw / 14.4);
 
   &:last-child {
     margin-bottom: 0;
@@ -23,12 +23,12 @@
     flex: 0 0 50%;
 
     &-title {
-      font-size: 18px;
-      margin: 0 0 15px 0;
+      font-size: calc(18vw / 14.4);
+      margin: 0 0 calc(15vw / 14.4) 0;
     }
 
     &-price {
-      font-size: 24px;
+      font-size: calc(24vw / 14.4);
     }
   }
 
@@ -50,7 +50,7 @@
 
       &__delete {
         background-color: tomato;
-        margin: 0 10px;
+        margin: 0 calc(10vw / 14.4);
       }
 
       @media screen and (min-width: 1441px){
@@ -62,8 +62,84 @@
     }
 
     &-field {
-      font-size: 24px;
-      margin: 0 10px;
+      font-size: calc(24vw / 14.4);
+      margin: 0 calc(10vw / 14.4);
+    }
+  }
+
+  @media screen and (min-width: 1441px){
+    & {
+      padding: 10px;
+      border: 3px solid #652D90;
+
+      &-description {
+        &-title {
+          font-size: 22px;
+          margin: 0 0 15px 0;
+        }
+
+        &-price {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &-count {
+        &-field {
+          font-size: 28px;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      flex-direction: column;
+      text-align: center;
+      border: calc(3vw / 3.2) solid #652D90;
+      border-radius: calc(10vw / 3.2);
+      padding: calc(10vw / 3.2);
+      margin-bottom: calc(10vw / 3.2);
+
+      &-img {
+        margin-bottom: 10px;
+    
+        & > img {
+          width: 50%;
+        }
+      }
+
+      &-description {
+        &-title {
+          font-size: calc(18vw / 3.2);
+          margin: 0 0 calc(15vw / 3.2) 0;
+        }
+    
+        &-price {
+          font-size: calc(24vw / 3.2);
+          margin-bottom: calc(10vw / 3.2);
+        }
+      }
+
+      &-count {
+        &-btn {
+          font-size: calc(24vw / 3.2);
+          width: calc(40vw / 3.2);
+          height: calc(40vw / 3.2);
+          border-radius: calc(5vw / 3.2);
+
+          &__delete {
+            font-size: calc(24vw / 3.2);
+            margin: 0 calc(10vw / 3.2);
+          }
+        }
+
+        &-field {
+          font-size: calc(24vw / 3.2);
+          margin: 0 calc(10vw / 3.2);
+        }
+      }
     }
   }
 }
