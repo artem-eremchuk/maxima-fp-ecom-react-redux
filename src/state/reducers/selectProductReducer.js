@@ -1,6 +1,7 @@
 const SELECT_PRODUCT= 'SELECT_PRODUCT';
 
-const initialState = JSON.parse(window.localStorage.getItem('product')) || {};
+const initialState = 
+  JSON.parse(window.localStorage.getItem('product')) || {};
 
 const selectProductReducer = (state = initialState, action) => {
   switch(action.type) {  

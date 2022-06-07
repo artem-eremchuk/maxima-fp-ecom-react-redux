@@ -1,31 +1,21 @@
 import './CartCard.scss';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AiOutlineDelete } from 'react-icons/ai';
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state/actionCreators';
 
 function CartCard({ product }) {
-  const { id, title, image, count, payment } = product;
+  const { title, image, count, payment } = product;
 
   const dispatch = useDispatch();
 
-  const products = useSelector(state => state.products.products);
-  const isInCart = products.find(product => product.id === id).isInCart; 
-  const cart = useSelector(state => state.cart);
-  
   const { 
     removeFromCart,
     changeIsInCartParam,
     increasePayment,
     dicreasePayment,
   } = bindActionCreators(actionCreators, dispatch);
-  
-  useEffect(() => {
-    if(isInCart) {
-      localStorage.setItem('cart', JSON.stringify(cart))
-    } 
-  }, [cart, isInCart])
   
   const deleteFromCart = () => {
     removeFromCart(product);

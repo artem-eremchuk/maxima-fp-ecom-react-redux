@@ -3,9 +3,7 @@ const INCREASE_PAYMENT = 'INCREASE_PAYMENT';
 const DICREASE_PAYMENT = 'DICREASE_PAYMENT'
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 
-const initialState = JSON.parse(window.localStorage.getItem('cart')) || [];
-
-const cartReducer = (state = initialState, action) => {
+const cartReducer = (state = [], action) => {
   switch(action.type){
     case ADD_TO_CART:
       return [

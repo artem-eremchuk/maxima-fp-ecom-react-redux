@@ -2,13 +2,11 @@ import './Product.scss';
 import React, { useEffect } from 'react';
 import Button from '../Button/Button';
 
-// Individual Page
 function Product({ product }) {
   const { title, description, image, price } = product;
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    localStorage.setItem('product', JSON.stringify(product))
   }, [product])
 
   return (

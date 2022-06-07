@@ -1,37 +1,10 @@
 import './CartPage.scss';
-import React, { useEffect } from 'react';
+import React from 'react';
 import CartCard from '../../components/CartCard/CartCard';
-// import { useDispatch, useSelector } from 'react-redux';
 import { useSelector } from 'react-redux';
-// import { actionCreators } from '../../state/actionCreators';
-// import { bindActionCreators } from 'redux';
-
 
 function CartPage() {
   const cart = useSelector(state => state.cart);
-  // const {cart, isProductsLoaded} = useSelector(state => state);
-  // const dispatch = useDispatch();
-
-  // const { 
-  //   fetchProducts,
-  //   compareCartAndProducts,
-  // } = bindActionCreators(actionCreators, dispatch);
-
-  // useEffect(() => {
-  //   fetchProducts();
-  // }, []) // eslint-disable-line react-hooks/exhaustive-deps
-
-  // useEffect(() => {
-  //   if (isProductsLoaded) {
-  //     compareCartAndProducts(cart);
-  //   }
-  // }, [isProductsLoaded]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    if(!cart.length) {
-      localStorage.removeItem('cart');
-    }
-  }, [cart])
 
   return (
     <div className='cart-wrapper'>
