@@ -2,7 +2,22 @@
   &-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 150px 0;
+    height: 100%;
+
+    & > img {
+      height: 40vh;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      &-wrapper {
+        & > img {
+          height: 30vh;
+        }
+      }
+    }
   }
 }
