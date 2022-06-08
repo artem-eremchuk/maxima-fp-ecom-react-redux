@@ -7,13 +7,16 @@ import Spinner from '../components/Spinner/Spinner';
 
 function HomePage() {
   const { 
-    products, 
+    // products, 
     loading,
     isProductsLoaded,
+    categoryFilter, // how to use
   } = useSelector((state) => state.products);
   const cart = useSelector((state) => state.cart);
   const searchText = useSelector((state) => state.searchProduct);
   const dispatch = useDispatch();
+
+  // console.log(categoryFilter);
 
   const { 
     fetchProducts,
@@ -30,19 +33,23 @@ function HomePage() {
     }
   }, [isProductsLoaded]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [categoryFilter])
+
   return (
     <>
       {loading
-        ? <Spinner /> 
-        : products
-            .filter(product => product.title
-              .toLowerCase().includes(searchText))
+        ? <Spinner />     
+        : categoryFilter.filter(product => 
+            product.title.toLowerCase().includes(searchText))
               .map(product => (
                 <ProductCard 
                   key={product.id} 
                   product={product} 
                 />
-            ))
+              )
+            )
       }
     </>
   )

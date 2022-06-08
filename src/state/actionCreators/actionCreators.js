@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const categoryFilter = (category) => {
+  return {
+    type: 'CATEGORY_FILTER',
+    payload: category,
+  }
+}
+
 export const dicreasePayment = (product) => {
   return {
     type: 'DICREASE_PAYMENT',

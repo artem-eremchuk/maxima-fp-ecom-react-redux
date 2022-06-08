@@ -3,12 +3,14 @@ const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
 const FETCH_PRODUCTS_FAILURE = 'FETCH_PRODUCTS_FAILURE';
 const CHANGE_IS_IN_CART_PARAM = 'CHANGE_IS_IN_CART_PARAM';
 const COMPARE_CART_AND_PRODUCTS = 'COMPARE_CART_AND_PRODUCTS';
+const CATEGORY_FILTER = 'CATEGORY_FILTER';
 
 const initialState = {
   products: [],
   loading: false,
   error: null, 
-  isProductsLoaded: null
+  isProductsLoaded: null,
+  categoryFilter: [],
 }
 
 const productsReducer = (state = initialState, action) => {
@@ -26,6 +28,12 @@ const productsReducer = (state = initialState, action) => {
         loading: false,
         isProductsLoaded: true,
         products: action.payload.map((product) => {
+          return {
+            ...product,
+            isInCart: false,
+          }
+        }),
+        categoryFilter: action.payload.map((product) => {
           return {
             ...product,
             isInCart: false,
@@ -68,6 +76,11 @@ const productsReducer = (state = initialState, action) => {
               : product
         )
       }
+    case CATEGORY_FILTER:
+      return {
+        ...state, 
+        categoryFilter: state.products.filter(product => product.category === action.payload)
+      }  
     default:
       return state;
   }

@@ -1,11 +1,19 @@
 import './Footer.scss';
-import React from 'react';
-
-import { Link } from 'react-router-dom';
-
 import Logo from '../../components/Logo/Logo';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../../state/actionCreators';
 
 function Footer() {
+  const dispatch = useDispatch();
+
+  const { 
+    fetchProducts,
+    categoryFilter
+  } = bindActionCreators(actionCreators, dispatch);
+
   return (
     <footer className='footer'>
       <div className="container">
@@ -14,28 +22,38 @@ function Footer() {
             <h3 className="footer-block__title">Катагории товаров</h3>
             <Link 
               to={'/'} 
-              className="footer-block__link">
-              Бытовая техника
+              className="footer-block__link"
+              onClick={() => fetchProducts()}
+            >  
+              Все товары
             </Link>
             <Link 
               to={'/'} 
-              className="footer-block__link">
+              className="footer-block__link"
+              onClick={() => categoryFilter("electronics")}
+            >  
               Электроника
             </Link>
             <Link 
               to={'/'} 
-              className="footer-block__link">
-              Одежда
+              className="footer-block__link"
+              onClick={() => categoryFilter("men's clothing")}
+            >  
+              Мужская одежда
             </Link>
             <Link 
               to={'/'} 
-              className="footer-block__link">
-              Обувь
+              className="footer-block__link"
+              onClick={() => categoryFilter("women's clothing")}
+            >  
+              Женская одежда
             </Link>
             <Link 
               to={'/'} 
-              className="footer-block__link">
-              Аксессуары
+              className="footer-block__link"
+              onClick={() => categoryFilter("jewelery")}
+            >  
+              Ювелирные изделия
             </Link>
           </div>
           <div className="footer-block">
