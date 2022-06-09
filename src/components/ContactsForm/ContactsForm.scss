@@ -1,0 +1,35 @@
+.contacts{
+  &-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(900vw / 14.4);
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin: calc(26vw / 14.4) 0 calc(52vw / 14.4) 0;
+    padding: calc(30vw / 14.4) calc(50vw / 14.4);
+
+    &__title {
+      margin: 0 0 calc(51vw / 14.4) 0;
+      font-weight: 400;
+      font-size: calc(36vw / 14.4);
+      color: #000000;
+    }
+
+    &__submit {
+      background: #EDD603;
+      border-radius: 10px;
+      color: #000000;
+      padding: calc(15vw / 14.4) calc(64vw / 14.4);
+      font-size: calc(20vw / 14.4);
+      border: none;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+

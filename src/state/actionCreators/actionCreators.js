@@ -1,5 +1,19 @@
 import axios from "axios";
 
+export const setUsername = (text) => {
+  return {
+    type: 'SET_USERNAME',
+    payload: text,
+  }
+}
+
+export const setEmail = (email) => {
+  return {
+    type: 'SET_EMAIL',
+    payload: email,
+  }
+} 
+
 export const categoryFilter = (category) => {
   return {
     type: 'CATEGORY_FILTER',
@@ -13,7 +27,6 @@ export const dicreasePayment = (product) => {
     payload: product,
   }
 }
-
 
 export const increasePayment = (product) => {
   return {
