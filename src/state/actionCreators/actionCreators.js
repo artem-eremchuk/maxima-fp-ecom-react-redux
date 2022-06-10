@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const setSex = (value) => {
+  return {
+    type: 'SET_SEX', 
+    payload: value,
+  }
+}
+
 export const changeErrorParam = (key) => {
   return {
     type: 'CHANGE_ERROR_PARAM',

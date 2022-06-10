@@ -19,7 +19,7 @@ function Footer() {
       <div className="container">
         <div className="footer-wrapper">
           <div className="footer-block">
-            <h3 className="footer-block__title">Катагории товаров</h3>
+            <h3 className="footer-block__title">Категории товаров</h3>
             <Link 
               to={'/'} 
               className="footer-block__link"
