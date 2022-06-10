@@ -1,22 +1,28 @@
-.input {
+.textarea {
   width: 100%;
-  padding: calc(15vw / 14.4);
-  font-size: calc(24vw / 14.4);
+  height: calc(320vw / 14.4);
+  resize: none;
   background: #FFFFFF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: calc(5vw / 14.4);
+  border-radius: 5px;
+  padding: calc(15vw / 14.4);
   margin-bottom: calc(15vw / 14.4);
-  border: 2px solid transparent;
-  outline: 0;
+  border: calc(2vw/ 14.4) solid transparent;
+  font-size: calc(24vw / 14.4);
   color: #A39F9F;
 
   &:focus {
-    border: 2px solid transparent;
+    border: calc(2vw/ 14.4) solid transparent;
     outline: 0;
   }
 
   &::placeholder {
+    font-size: calc(24vw / 14.4);
     color: #A39F9F;
+  }
+
+  &-wrapper {
+    width: 100%;
   }
 
   &-check {
@@ -27,10 +33,6 @@
       color: tomato;
     }
   }
-
-  &-wrapper {
-    width: 100%;
-  } 
 }
 
 .error, .error:focus {

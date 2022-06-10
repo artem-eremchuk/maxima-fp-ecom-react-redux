@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const setTextarea = (text) => {
+  return {
+    type: 'SET_TEXTAREA',
+    payload: text,
+  }
+}
+
 export const setSex = (value) => {
   return {
     type: 'SET_SEX', 

@@ -3,6 +3,7 @@ const REGEX = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)
 const SET_USERNAME = 'SET_USERNAME';
 const SET_EMAIL = 'SET_EMAIL';
 const SET_SEX = 'SET_SEX';
+const SET_TEXTAREA = 'SET_TEXTAREA';
 const CHANGE_ERROR_PARAM = 'CHANGE_ERROR_PARAM';
 
 const initState = {
@@ -18,7 +19,12 @@ const initState = {
   },
   sex: {
     value: ''
-  }
+  },
+  textarea: {
+    value: '',
+    isValid: false,
+    error: false,
+  },
 }
 
 const contactsFormReducer = (state = initState, action) => {
@@ -43,6 +49,15 @@ const contactsFormReducer = (state = initState, action) => {
           isValid: (REGEX.test(String(action.payload).toLowerCase())) ? true : false,
         }
       }  
+    case SET_TEXTAREA:
+      return {
+        ...state,
+        textarea: {
+          ...state.textarea,
+          value: action.payload,
+          isValid: (action.payload.length > 0 && action.payload.length <= 255) ? true : false,
+        }
+      }  
     case CHANGE_ERROR_PARAM:
       return {
         ...state,
@@ -50,8 +65,7 @@ const contactsFormReducer = (state = initState, action) => {
           ...state[`${action.payload}`],
           error: true
         }
-      }  
-
+      }    
     case SET_SEX:
       return {
         ...state,

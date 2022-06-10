@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import UsernameField from './UsernameField/UsernameField';
 import EmailField from './EmailField/EmailField';
 import RadioButtonsField from './RadioButtonsField/RadioButtonsField';
+import TextareaField from './TextareaField/TextareaField';
 
 function Form() {
   const contactsForm = useSelector(state => state.contactsForm);
@@ -34,6 +35,7 @@ function Form() {
       <UsernameField />
       <EmailField />
       <RadioButtonsField />
+      <TextareaField />
       <button 
         className='contacts-form__submit'
         type='submit'
