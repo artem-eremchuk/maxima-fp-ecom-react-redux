@@ -5,8 +5,9 @@ import UsernameField from './UsernameField/UsernameField';
 import EmailField from './EmailField/EmailField';
 import RadioButtonsField from './RadioButtonsField/RadioButtonsField';
 import TextareaField from './TextareaField/TextareaField';
+import TermsField from './TermsField/TermsField';
 
-function Form() {
+function ContactsForm() {
   const contactsForm = useSelector(state => state.contactsForm);
 
   const handlerSubmit =  (e) => {
@@ -36,10 +37,10 @@ function Form() {
       <EmailField />
       <RadioButtonsField />
       <TextareaField />
+      <TermsField />
       <button 
         className='contacts-form__submit'
         type='submit'
-        // disabled="true"
       >
         Отправить
       </button>
@@ -47,4 +48,4 @@ function Form() {
   )
 }
 
-export default Form;
+export default ContactsForm;

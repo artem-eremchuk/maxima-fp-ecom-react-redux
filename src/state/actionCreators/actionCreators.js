@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const setTerms = (check) => {
+  return {
+    type: 'SET_TERMS',
+    payload: check,
+  }
+}
+
 export const setTextarea = (text) => {
   return {
     type: 'SET_TEXTAREA',

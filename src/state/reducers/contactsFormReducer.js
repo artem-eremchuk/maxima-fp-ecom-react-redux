@@ -4,7 +4,9 @@ const SET_USERNAME = 'SET_USERNAME';
 const SET_EMAIL = 'SET_EMAIL';
 const SET_SEX = 'SET_SEX';
 const SET_TEXTAREA = 'SET_TEXTAREA';
+const SET_TERMS = 'SET_TERMS';
 const CHANGE_ERROR_PARAM = 'CHANGE_ERROR_PARAM';
+
 
 const initState = {
   name: {
@@ -25,6 +27,11 @@ const initState = {
     isValid: false,
     error: false,
   },
+  terms: {
+    value: null,
+    isValid: false,
+    error: false,
+  }
 }
 
 const contactsFormReducer = (state = initState, action) => {
@@ -56,6 +63,15 @@ const contactsFormReducer = (state = initState, action) => {
           ...state.textarea,
           value: action.payload,
           isValid: (action.payload.length > 0 && action.payload.length <= 255) ? true : false,
+        }
+      }  
+    case SET_TERMS:
+      return {
+        ...state,
+        terms: {
+          ...state.terms,
+          value: action.payload,
+          isValid: action.payload,
         }
       }  
     case CHANGE_ERROR_PARAM:
