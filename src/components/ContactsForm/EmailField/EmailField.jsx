@@ -8,16 +8,26 @@ function PasswordField() {
   const [ inputEmail, setInputEmail ] = useState('')
   
   const dispatch = useDispatch();
-  const { isValid } = useSelector(state => state.contactsForm.email);
+  const { isValid, error  } = useSelector(state => state.contactsForm.email);
 
   const { 
-    setEmail
+    setEmail,
+    changeErrorParam
   } = bindActionCreators(actionCreators, dispatch);
 
   const handlerChange = (e) => {
     setInputEmail(e.target.value );
     setEmail(e.target.value);
+
+    if (!error) {
+      changeErrorParam('email');
+    }
   }
+
+  // console.log(
+  //   'isValid:', isValid,
+  //   'error:', error, 
+  // );
 
   return (
     <div className='input-wrapper'>
@@ -27,13 +37,13 @@ function PasswordField() {
         name='email' 
         placeholder='Email' 
         autoComplete='off'
-        className={isValid ? 'input' : 'input error'}
+        className={((isValid && error) || (!isValid && !error)) ? 'input' : 'input error'}
         value={inputEmail}
         onChange={(e) => handlerChange(e)}
       />
       <div className="input-check">
         <span className='input-check__text'>
-          {isValid 
+          {((isValid && error) || (!isValid && !error))
             ? null : 
             (inputEmail.length > 0) 
               ? 'Email введен неправильно' 

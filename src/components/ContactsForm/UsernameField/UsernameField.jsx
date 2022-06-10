@@ -5,18 +5,28 @@ import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../../state/actionCreators';
 
 function UsernameField() {
-  const [ inputText, setInputText ] = useState('')
+  const [ inputText, setInputText ] = useState('');
   
   const dispatch = useDispatch();
-  const { isValid } = useSelector(state => state.contactsForm.name);
+  const { isValid, error } = useSelector(state => state.contactsForm.name);
+
+  // console.log(
+  //   'isValid:', isValid,
+  //   'error:', error, 
+  // );
 
   const { 
-    setUsername
+    setUsername,
+    changeErrorParam
   } = bindActionCreators(actionCreators, dispatch);
 
   const handlerChange = (e) => {
     setInputText(e.target.value );
     setUsername(e.target.value);
+
+    if (!error) {
+      changeErrorParam('name');
+    }
   }
 
   return (
@@ -27,15 +37,15 @@ function UsernameField() {
         name='username' 
         placeholder='Имя' 
         autoComplete='off'
-        className={isValid ? 'input' : 'input error'}
+        className={((isValid && error) || (!isValid && !error))  ? 'input' : 'input error'}
         value={inputText}
         onChange={(e) => handlerChange(e)}
       />
       <div className="input-check">
         <span className='input-check__text'>
-          {isValid 
-            ? null : 
-            'Поле обязательно для заполнения'
+          {((isValid && error) || (!isValid && !error))
+            ? null
+            : 'Поле обязательно для заполнения'
           }
         </span>
       </div>

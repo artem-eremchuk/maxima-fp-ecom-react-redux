@@ -1,5 +1,12 @@
 import axios from "axios";
 
+export const changeErrorParam = (key) => {
+  return {
+    type: 'CHANGE_ERROR_PARAM',
+    payload: key
+  }
+}
+
 export const setUsername = (text) => {
   return {
     type: 'SET_USERNAME',
