@@ -26,6 +26,15 @@ function ContactsForm() {
     // eslint-disable-next-line
   }, [])
 
+  const sendToServer = (form) => {
+    const objectToServer = Object.keys(form).reduce((acc, key) => ({
+      ...acc,
+      [key]: form[key].value
+     }), {})
+
+     console.log(JSON.stringify(objectToServer));
+  }
+
   const handlerSubmit =  (e) => {
     e.preventDefault();
     
@@ -34,6 +43,7 @@ function ContactsForm() {
     if(valid) {
       setIsValid(true);
       clearForm();
+      sendToServer(contactsForm);
     } else {
       turnOnAllErrors();
     }

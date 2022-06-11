@@ -12,7 +12,7 @@
   color: #A39F9F;
 
   &:focus {
-    border: calc(2vw/ 14.4) solid transparent;
+    border: calc(2vw / 14.4) solid transparent;
     outline: 0;
   }
 
@@ -31,6 +31,56 @@
     &__text {
       font-size: calc(20vw / 14.4);
       color: tomato;
+    }
+  }
+
+  @media screen and (min-width: 1441px){
+    & {
+      height: 320px;
+      padding: 15px;
+      margin-bottom: 15px;
+      font-size: 24px;
+
+      &:focus {
+        border: 2px solid transparent;
+      }
+    
+      &::placeholder {
+        font-size: 24px;
+      }
+
+      &-check {
+        margin-bottom: 25px;
+    
+        &__text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      height: calc(200vw / 3.2);
+      padding: calc(8vw / 3.2);
+      margin-bottom: calc(10vw / 3.2);
+      font-size: calc(24vw / 3.2);
+
+      &:focus {
+        border: calc(2vw / 3.2) solid transparent;
+      }
+    
+      &::placeholder {
+        font-size: calc(18vw / 3.2);
+      }
+
+      &-check {
+        margin-bottom: calc(20vw / 3.2);
+    
+        &__text {
+          font-size: calc(12vw / 3.2);
+        }
+      }
     }
   }
 }

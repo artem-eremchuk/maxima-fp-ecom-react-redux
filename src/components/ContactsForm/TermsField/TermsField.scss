@@ -16,7 +16,7 @@
     width: calc(20vw / 14.4);
     height: calc(20vw / 14.4);
     border: 3px solid #EDD603;
-    margin-right: 16px;
+    margin-right: calc(16vw / 14.4);
     box-sizing: border-box;
     padding: calc(2vw / 14.4);
 
@@ -33,7 +33,7 @@
   &__text {
     font-size: calc(24vw / 14.4);
     color: #797979;
-    margin-right: 10px;
+    margin-right: calc(10vw / 14.4);
   }
 
   &__link {
@@ -50,5 +50,61 @@
     font-size: calc(20vw / 14.4);
     color: tomato;
     margin-bottom: calc(42vw / 14.4);
+  }
+
+  @media screen and (min-width: 1441px){
+    & {
+      margin-bottom: 15px;
+
+      &__checkbox {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+        padding: 2px;
+      }
+
+      &__text {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+    
+      &__link {
+        font-size: 24px;
+      }
+    
+      &-check {
+        font-size: 20px;
+        margin-bottom: 42px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      flex-wrap: wrap;
+      margin-bottom: calc(15vw / 3.2);
+
+      &__checkbox {
+        width: calc(20vw / 3.2);
+        height: calc(20vw / 3.2);
+        padding: calc(2vw / 3.2);
+        margin-right: calc(10vw / 3.2);
+      }
+
+      &__text {
+        font-size: calc(14vw / 3.2);
+        margin-right: calc(10vw / 3.2);
+      }
+    
+      &__link {
+        font-size: calc(14vw / 3.2);
+        margin-top: calc(8vw / 3.2);
+      }
+    
+      &-check {
+        font-size: calc(12vw / 3.2);
+        margin-bottom: calc(20vw / 3.2);
+      }
+    }
   }
 }

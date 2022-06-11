@@ -31,6 +31,42 @@
   &-wrapper {
     width: 100%;
   } 
+
+  @media screen and (min-width: 1441px){
+    & {
+      padding: 15px;
+      font-size: 24px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      margin-bottom: 15px;
+
+      &-check {
+        margin-bottom: 24px;
+    
+        &__text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    & {
+      padding: calc(8vw / 3.2);
+      font-size: calc(18vw / 3.2);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: calc(5vw / 3.2);
+      margin-bottom: calc(10vw / 3.2);
+
+      &-check {
+        margin-bottom: calc(20vw / 3.2);
+    
+        &__text {
+          font-size: calc(12vw / 3.2);
+        }
+      }
+    }
+  }
 }
 
 .error, .error:focus {

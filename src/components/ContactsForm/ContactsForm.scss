@@ -39,6 +39,40 @@
     @media screen and (min-width: 1441px){
       & {
         width: 900px;
+        border-radius: 15px;
+        margin: 26px 0 52px 0;
+        padding: 30px 50px;
+
+        &__title {
+          font-size: 36px;
+          margin: 0 0 51px 0;
+        }
+
+        &__submit {
+          border-radius: 10px;
+          padding: 15px 64px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+      & {
+        width: calc(288vw / 3.2);
+        border-radius: calc(15vw / 3.2);
+        margin: calc(26vw / 3.2) 0 calc(36vw / 3.2) 0;
+        padding: calc(15vw / 3.2) calc(25vw / 3.2);
+
+        &__title {
+          margin: 0 0 calc(20vw / 3.2) 0;
+          font-size: calc(24vw / 3.2);
+        }
+
+        &__submit {
+          border-radius: calc(10vw / 3.2);
+          padding: calc(15vw / 3.2) calc(64vw / 3.2);
+          font-size: calc(20vw / 3.2);
+        }
       }
     }
   }

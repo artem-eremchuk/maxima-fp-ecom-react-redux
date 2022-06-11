@@ -4,16 +4,10 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../../state/actionCreators';
-import { useEffect } from 'react';
 
 function TermsField() {
   const [checked, setChecked] = useState(false);
 
-  useEffect(() => {
-    setTerms(checked)
-    // eslint-disable-next-line
-  }, [checked])
- 
   const dispatch = useDispatch();
   const { isValid, error } = useSelector(state => state.contactsForm.terms);
 
@@ -24,6 +18,7 @@ function TermsField() {
 
   const handlerChange = () => {
     setChecked(prev => !prev);
+    setTerms(!checked)
 
     if (!error) {
       changeErrorParam('terms');

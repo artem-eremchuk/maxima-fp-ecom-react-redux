@@ -9,12 +9,7 @@ function UsernameField() {
   
   const dispatch = useDispatch();
   const { isValid, error } = useSelector(state => state.contactsForm.name);
-
-  // console.log(
-  //   'isValid:', isValid,
-  //   'error:', error, 
-  // );
-
+  
   const { 
     setUsername,
     changeErrorParam
