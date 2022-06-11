@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/maxima-fp-ecom-react-redux/static/css/main.a3a1eaf6.css",
-    "main.js": "/maxima-fp-ecom-react-redux/static/js/main.cff26362.js",
+    "main.css": "/maxima-fp-ecom-react-redux/static/css/main.2e6a45f3.css",
+    "main.js": "/maxima-fp-ecom-react-redux/static/js/main.45a75422.js",
     "static/media/spinner-planets.gif": "/maxima-fp-ecom-react-redux/static/media/spinner-planets.1cbc65b12d68de6e3c23.gif",
     "static/media/success_2.gif": "/maxima-fp-ecom-react-redux/static/media/success_2.eff5ec07677904cc93ff.gif",
     "static/media/Roboto-Regular.woff": "/maxima-fp-ecom-react-redux/static/media/Roboto-Regular.31012f9b3e3da44f87e8.woff",
     "static/media/Roboto-Regular.woff2": "/maxima-fp-ecom-react-redux/static/media/Roboto-Regular.a25806274237d06e00a6.woff2",
     "static/media/logo.svg": "/maxima-fp-ecom-react-redux/static/media/logo.960ce00deab07376b8bc27234ff9ca27.svg",
     "index.html": "/maxima-fp-ecom-react-redux/index.html",
-    "main.a3a1eaf6.css.map": "/maxima-fp-ecom-react-redux/static/css/main.a3a1eaf6.css.map",
-    "main.cff26362.js.map": "/maxima-fp-ecom-react-redux/static/js/main.cff26362.js.map"
+    "main.2e6a45f3.css.map": "/maxima-fp-ecom-react-redux/static/css/main.2e6a45f3.css.map",
+    "main.45a75422.js.map": "/maxima-fp-ecom-react-redux/static/js/main.45a75422.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3a1eaf6.css",
-    "static/js/main.cff26362.js"
+    "static/css/main.2e6a45f3.css",
+    "static/js/main.45a75422.js"
   ]
 }
