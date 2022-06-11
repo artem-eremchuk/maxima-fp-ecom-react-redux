@@ -29,6 +29,7 @@
       padding: calc(15vw / 14.4) calc(64vw / 14.4);
       font-size: calc(20vw / 14.4);
       border: none;
+      cursor: pointer;
 
       &:disabled {
         opacity: 0.5;

@@ -47,6 +47,15 @@
       font-size: calc(22vw / 14.4);
       text-transform: uppercase;
       font-weight: 700;
+      margin-bottom: calc(20vw / 14.4);
+    }
+
+    &__btn {
+      font-size: calc(24vw / 14.4);
+      padding: calc(10vw / 14.4) calc(16vw / 14.4);
+      background-color: #652D90;
+      color: #ffffff;
+      border-radius: calc(5vw / 14.4);
     }
   }
 
@@ -67,6 +76,12 @@
 
         &__sum {
           font-size: 28px;
+          margin-bottom: 20px;
+        }
+
+        &__btn {
+          font-size: 24px;
+          padding: 10px 16px;
         }
       }
 
@@ -109,6 +124,13 @@
 
         &__sum {
           font-size: calc(20vw / 3.2);
+          margin-bottom: calc(20vw / 3.2);
+        }
+
+        &__btn {
+          font-size: calc(24vw / 3.2);
+          padding: calc(10vw / 3.2) calc(16vw / 3.2);
+          border-radius: calc(5vw / 3.2);
         }
       }
 

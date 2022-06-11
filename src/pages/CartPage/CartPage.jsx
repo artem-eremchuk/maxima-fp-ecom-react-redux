@@ -6,6 +6,10 @@ import { useSelector } from 'react-redux';
 function CartPage() {
   const cart = useSelector(state => state.cart);
 
+  const sendToServer = (cart) => {
+    console.log(JSON.stringify(cart));
+  }
+
   return (
     <div className='cart-wrapper'>
       <ul className="cart-list">
@@ -35,6 +39,12 @@ function CartPage() {
             cart.reduce((total, purchase) => total + purchase.payment, 0).toFixed(2)
           }`}
         </div>
+        <button 
+          className='cart-total__btn'
+          onClick={() => sendToServer(cart)}
+        >
+          Оплатить
+        </button>
       </div>
     </div>
   )
