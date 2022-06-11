@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 function TermsField() {
   const [checked, setChecked] = useState(false);
 
-
   useEffect(() => {
     setTerms(checked)
     // eslint-disable-next-line

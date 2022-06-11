@@ -1,0 +1,9 @@
+.success {
+  width: calc(300vw / 14.4);
+  height: calc(300vw / 14.4);
+  margin-bottom: 51px;
+
+  &-logo {
+    width: 100%;
+  }
+}

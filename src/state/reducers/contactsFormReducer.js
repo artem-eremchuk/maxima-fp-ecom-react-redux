@@ -6,24 +6,27 @@ const SET_SEX = 'SET_SEX';
 const SET_TEXTAREA = 'SET_TEXTAREA';
 const SET_TERMS = 'SET_TERMS';
 const CHANGE_ERROR_PARAM = 'CHANGE_ERROR_PARAM';
-
+const TURN_ON_ALL_ERRORS = 'TURN_ON_ALL_ERRORS';
+const CLEAR_FORM = 'CLEAR_FORM';
 
 const initState = {
   name: {
-    value: '',
+    value: null,
     isValid: false,
     error: false,
   },
   email: {
-    value: '',
+    value: null,
     isValid: false,
     error: false,
   },
   sex: {
-    value: ''
+    value: null,
+    isValid: true,
+    error: false,
   },
   textarea: {
-    value: '',
+    value: null,
     isValid: false,
     error: false,
   },
@@ -56,6 +59,15 @@ const contactsFormReducer = (state = initState, action) => {
           isValid: (REGEX.test(String(action.payload).toLowerCase())) ? true : false,
         }
       }  
+    case SET_SEX:
+      return {
+        ...state,
+        sex: {
+          ...state.sex,
+          value: action.payload,
+          isValid: true,
+        }
+      }  
     case SET_TEXTAREA:
       return {
         ...state,
@@ -81,15 +93,26 @@ const contactsFormReducer = (state = initState, action) => {
           ...state[`${action.payload}`],
           error: true
         }
-      }    
-    case SET_SEX:
-      return {
-        ...state,
-        sex: {
-          ...state.sex,
-          value: action.payload,
+      } 
+    case TURN_ON_ALL_ERRORS:
+      return Object.keys(state).reduce((newState, key) => ({
+        ...newState,
+        [key]: {
+          ...state[key],
+          error: true,
         }
-      }  
+      }), {})
+      
+    case CLEAR_FORM:
+      return Object.keys(state).reduce((newState, key) => ({
+        ...newState,
+        [key]: {
+          ...state[key],
+          value: null,
+          isValid: (key === 'sex') ? true : false,
+          error: false,
+        }
+      }), {}) 
     default:
       return state;
   }

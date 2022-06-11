@@ -1,5 +1,17 @@
 import axios from "axios";
 
+export const clearForm = () => {
+  return {
+    type: 'CLEAR_FORM',
+  }
+}
+
+export const turnOnAllErrors = () => {
+  return {
+    type: 'TURN_ON_ALL_ERRORS',
+  }
+}
+
 export const setTerms = (check) => {
   return {
     type: 'SET_TERMS',
