@@ -1,10 +1,14 @@
 import './CartPage.scss';
-import React from 'react';
+import React, { useEffect } from 'react';
 import CartCard from '../../components/CartCard/CartCard';
 import { useSelector } from 'react-redux';
 
 function CartPage() {
   const cart = useSelector(state => state.cart);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const sendToServer = (cart) => {
     if(cart.length !== 0) {
@@ -41,12 +45,14 @@ function CartPage() {
             cart.reduce((total, purchase) => total + purchase.payment, 0).toFixed(2)
           }`}
         </div>
-        <button 
-          className='cart-total__btn'
-          onClick={() => sendToServer(cart)}
-        >
-          Оплатить
-        </button>
+        <div className="cart-total__btn-wrapper">
+          <button 
+            className='cart-total__btn'
+            onClick={() => sendToServer(cart)}
+          >
+            Оплатить
+          </button>
+        </div>
       </div>
     </div>
   )

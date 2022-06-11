@@ -22,6 +22,7 @@ function ContactsForm() {
   } = bindActionCreators(actionCreators, dispatch);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     clearForm();
     // eslint-disable-next-line
   }, [])

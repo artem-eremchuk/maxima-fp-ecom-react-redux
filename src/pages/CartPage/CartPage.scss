@@ -133,6 +133,10 @@
           font-size: calc(24vw / 3.2);
           padding: calc(10vw / 3.2) calc(16vw / 3.2);
           border-radius: calc(5vw / 3.2);
+
+          &-wrapper {
+            text-align: center;
+          }
         }
       }
 
