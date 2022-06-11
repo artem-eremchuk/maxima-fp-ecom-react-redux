@@ -60,12 +60,13 @@
       & {
         width: calc(288vw / 3.2);
         border-radius: calc(15vw / 3.2);
-        margin: calc(26vw / 3.2) 0 calc(36vw / 3.2) 0;
+        margin: 0 0 calc(36vw / 3.2) 0;
         padding: calc(15vw / 3.2) calc(25vw / 3.2);
 
         &__title {
           margin: 0 0 calc(20vw / 3.2) 0;
           font-size: calc(24vw / 3.2);
+          text-align: center;
         }
 
         &__submit {

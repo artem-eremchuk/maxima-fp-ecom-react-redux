@@ -7,7 +7,9 @@ function CartPage() {
   const cart = useSelector(state => state.cart);
 
   const sendToServer = (cart) => {
-    console.log(JSON.stringify(cart));
+    if(cart.length !== 0) {
+      console.log(JSON.stringify(cart));
+    }
   }
 
   return (
