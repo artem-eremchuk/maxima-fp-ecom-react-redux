@@ -20,7 +20,6 @@ function Search() {
   const handlerSubmit = (e) => {
     e.preventDefault();
     setSearchText('');
-    // searchProduct('');
   }
 
   return (

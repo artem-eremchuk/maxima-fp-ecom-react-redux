@@ -1,8 +1,7 @@
-import './Layout.scss';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../../layouts/Header/Header';
-import Footer from '../../layouts/Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 function Layout() {
   return (

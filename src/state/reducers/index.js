@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import productsReducer from './productsReducer';
+import cartReducer from './cartReducer';
 import selectProductReducer from './selectProductReducer';
 import searchReducer from './searchReducer';
-import cartReducer from './cartReducer';
 import contactsFormReducer from './contactsFormReducer';
 
 const rootReducer = combineReducers({

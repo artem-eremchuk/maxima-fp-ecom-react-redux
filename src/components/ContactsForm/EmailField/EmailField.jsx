@@ -24,11 +24,6 @@ function PasswordField() {
     }
   }
 
-  // console.log(
-  //   'isValid:', isValid,
-  //   'error:', error, 
-  // );
-
   return (
     <div className='input-wrapper'>
       <label htmlFor="email"></label>

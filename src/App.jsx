@@ -7,7 +7,7 @@ import ProductPage from './pages/ProductPage';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
 import CartPage from './pages/CartPage/CartPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import Layout from './components/Layout/Layout';
+import Layout from './layouts/Layout/Layout';
 
 function App() {
   return (

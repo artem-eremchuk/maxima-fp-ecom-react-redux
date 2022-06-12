@@ -1,4 +1,3 @@
-import './ContactsPage.scss';
 import React from 'react';
 import ContactsForm from '../../components/ContactsForm/ContactsForm';
 

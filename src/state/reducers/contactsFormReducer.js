@@ -102,7 +102,6 @@ const contactsFormReducer = (state = initState, action) => {
           error: true,
         }
       }), {})
-      
     case CLEAR_FORM:
       return Object.keys(state).reduce((newState, key) => ({
         ...newState,
