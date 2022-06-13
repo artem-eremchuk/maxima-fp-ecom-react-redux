@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state/actionCreators';
 import { useState, useEffect } from 'react';
+
 import UsernameField from './UsernameField/UsernameField';
 import EmailField from './EmailField/EmailField';
 import RadioButtonsField from './RadioButtonsField/RadioButtonsField';
@@ -36,7 +37,7 @@ function ContactsForm() {
      console.log(JSON.stringify(objectToServer));
   }
 
-  const handlerSubmit =  (e) => {
+  const handlerSubmit = (e) => {
     e.preventDefault();
     
     const valid = Object.values(contactsForm).every(field => field.isValid);

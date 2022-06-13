@@ -38,15 +38,12 @@ function HomePage() {
     <>
       {loading
         ? <Spinner />     
-        : isProductsLoaded && categoryFilter.filter(product => 
-            product.title.toLowerCase().includes(searchText))
-              .map(product => (
-                <ProductCard 
-                  key={product.id} 
-                  product={product} 
-                />
-              )
-            )
+        : isProductsLoaded && categoryFilter.filter(product => product.title.toLowerCase().includes(searchText)).map(product => (
+          <ProductCard 
+            key={product.id} 
+            product={product} 
+          />
+        ))
       }
     </>
   )

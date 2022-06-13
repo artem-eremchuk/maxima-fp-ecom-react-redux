@@ -4,9 +4,10 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../state/actionCreators';
+import { Link } from 'react-router-dom';
 
 function CartCard({ product }) {
-  const { title, image, count, payment } = product;
+  const { id, title, image, count, payment } = product;
 
   const dispatch = useDispatch();
 
@@ -15,6 +16,7 @@ function CartCard({ product }) {
     changeIsInCartParam,
     increasePayment,
     dicreasePayment,
+    selectProduct
   } = bindActionCreators(actionCreators, dispatch);
   
   const deleteFromCart = () => {
@@ -36,9 +38,13 @@ function CartCard({ product }) {
 
   return (
     <li className="item">
-      <div className="item-img">
+      <Link 
+        to={`/product/${id}`} 
+        className="item-img"
+        onClick={() => selectProduct(product)}
+      >
         <img src={image} alt={title} />
-      </div>
+      </Link>
       <div className="item-description">
         <h3 className="item-description-title">{title}</h3>
         <div className="item-description-price">
